@@ -14,7 +14,3 @@ def bubble_sort(arr)
 
   arr
 end
-
-arr = [2,1,3,5,4,6,8,7,9]
-
-print bubble_sort arr
