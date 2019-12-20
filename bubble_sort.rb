@@ -15,20 +15,23 @@ def bubble_sort(arr)
   arr
 end
 
-def bubble_sort_by(arr)
-  n = arr.length - 1
+def bubble_sort_by(values)
+  l = values.length
   loop do
     swapped = false
-    n.times do |i|
-      if yield(arr[i], arr[i + 1]).positive?
-        arr[i], arr[i + 1] = arr[i + 1], arr[i]
+    (l - 1).times do |i|
+      if values[i] > values[i + 1]
+        values[i], values[i + 1] = values[i + 1], values[i]
         swapped = true
       end
     end
     break unless swapped
   end
-  arr
+  values
 end
 
+# Test Case
 arr = [2,3,100,3,5,4,10,7]
-puts bubble_sort(arr)
+values = [2,3,100,3,5,4,10,7]
+print bubble_sort(arr)
+puts bubble_sort_by(values)
