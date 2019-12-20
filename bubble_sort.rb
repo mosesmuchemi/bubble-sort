@@ -14,3 +14,6 @@ def bubble_sort(arr)
 
   arr
 end
+
+arr = [2,3,100,3,5,4,10,7]
+puts bubble_sort(arr)
