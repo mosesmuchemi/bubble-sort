@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 def bubble_sort(arr)
   n = arr.length
   loop do
     swapped = false
     (n - 1).times do |i|
       if arr[i] > arr[i + 1]
-        arr[i], arr[i + 1] = arr[i + 1], arr[i]#swap the elements
+        arr[i], arr[i + 1] = arr[i + 1], arr[i] # swap the elements
         swapped = true
       end
     end
@@ -31,12 +33,12 @@ def bubble_sort_by(values)
 end
 
 # Testing for the two methods
-arr = [2,3,100,3,5,4,10,7]
+arr = [2, 3, 100, 3, 5, 4, 10, 7]
 
 print bubble_sort(arr)
 puts
 
-sort_by = bubble_sort_by(arr) do |left,right|
+sort_by = bubble_sort_by(arr) do |left, right|
   left - right
 end
 
